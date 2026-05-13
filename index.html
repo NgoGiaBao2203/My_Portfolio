@@ -15,8 +15,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -29,7 +27,8 @@
     <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
       <div class="container-xl">
         <a class="navbar-brand" href="#home">
-          <span class="brand-accent">Ngo</span> Gia Bao
+          <span class="brand-accent" data-i18n="first-name">Ngo</span>
+          <span data-i18n="last-name">Gia Bao</span>
         </a>
         <button
           class="navbar-toggler border-0"
@@ -47,8 +46,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio" data-i18n="nav_portfolio">
-                Portfolio
+              <a class="nav-link" href="#project" data-i18n="project">
+                Project
               </a>
             </li>
             <li class="nav-item">
@@ -79,7 +78,8 @@
                 Welcome to my portfolio
               </p>
               <h1 class="display-4 fw-900 mb-4">
-                Ngo Gia <span class="text-primary">Bao</span>
+                <span data-i18n="first-name">Ngo</span>
+                <span class="text-primary" data-i18n="last-name">Gia Bao</span>
               </h1>
               <p class="lead text-muted mb-4" data-i18n="role_desc">
                 A Full-Stack Developer specializing in building optimized,
@@ -93,11 +93,20 @@
                   <span data-i18n="tech_stack">Tech Stack</span>
                 </p>
                 <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-light text-dark">HTML / CSS</span>
                   <span class="badge bg-light text-dark">React / Next.js</span>
-                  <span class="badge bg-light text-dark">.NET / C# / Java</span>
-                  <span class="badge bg-light text-dark">Spring Boot</span>
-                  <span class="badge bg-light text-dark">PostgreSQL</span>
-                  <span class="badge bg-light text-dark">Docker</span>
+                  <span class="badge bg-light text-dark"
+                    >.NET / ASP.NET Core</span
+                  >
+                  <span class="badge bg-light text-dark"
+                    >Java / Spring Boot</span
+                  >
+                  <span class="badge bg-light text-dark"
+                    >PostgreSQL / SQL Server</span
+                  >
+                  <span class="badge bg-light text-dark"
+                    >Docker / Git/ Jira</span
+                  >
                 </div>
               </div>
               <!-- CTA Buttons -->
@@ -142,9 +151,6 @@
       <div class="container-xl">
         <div class="row mb-5">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="text-muted text-uppercase small mb-2">
-              <span data-i18n="section_works">My Works</span>
-            </p>
             <h2 class="display-5 fw-900 mb-4" data-i18n="portfolio_title">
               Featured Projects
             </h2>
@@ -239,7 +245,6 @@
                     <span class="tech-badge">.NET Core</span>
                     <span class="tech-badge">C#</span>
                     <span class="tech-badge">SQL Server</span>
-                    <span class="tech-badge">MVC</span>
                   </div>
                   <div class="project-footer">
                     <a
@@ -270,6 +275,7 @@
                   </p>
                   <div class="tech-stack">
                     <span class="tech-badge">ASP.NET Core MVC</span>
+                    <span class="tech-badge">C#</span>
                     <span class="tech-badge">HTML/CSS/JS</span>
                     <span class="tech-badge">SQL Server</span>
                   </div>
@@ -289,7 +295,9 @@
           <!-- Photography Tab -->
           <div class="tab-pane fade" id="photo-content" role="tabpanel">
             <p class="text-center text-muted mb-5" data-i18n="photo_desc">
-              Specializing in couple, event, and media production photography
+              Preserving your most meaningful moments through graduation,
+              portrait, couple, landscape, and event photography, combined with
+              creative media solutions.
             </p>
             <div class="row g-4">
               <!-- Project Card 1 -->
@@ -393,9 +401,6 @@
       <div class="container-xl">
         <div class="row mb-5">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="text-muted text-uppercase small mb-2">
-              <span data-i18n="section_expertise">Expertise</span>
-            </p>
             <h2 class="display-5 fw-900" data-i18n="skills_title">
               Technologies & Tools
             </h2>
@@ -403,46 +408,74 @@
         </div>
         <div class="row">
           <!-- Backend -->
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="skill-category">
               <h4 class="mb-4">
                 <i class="fas fa-server text-primary me-2"></i>
                 <span data-i18n="skill_backend">Backend</span>
               </h4>
-              <div class="skill-items">
-                <span class="skill-item">.NET / C#</span>
-                <span class="skill-item">Spring Boot</span>
+              <div class="skill-items d-flex flex-wrap gap-2">
+                <span class="skill-item badge bg-light text-dark"
+                  >.NET / C#</span
+                >
+                <span class="skill-item badge bg-light text-dark"
+                  >Spring Boot (Java)</span
+                >
+                <span class="skill-item badge bg-light text-dark"
+                  >SQL Server / PostgreSQL</span
+                >
               </div>
             </div>
           </div>
           <!-- Frontend -->
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="skill-category">
               <h4 class="mb-4">
-                <i class="fas fa-palette text-primary me-2"></i>
+                <i class="fas fa-code text-primary me-2"></i>
                 <span data-i18n="skill_frontend">Frontend</span>
               </h4>
-              <div class="skill-items">
-                <span class="skill-item">React / Next.js</span>
-                <span class="skill-item">HTML / CSS / JavaScript</span>
-                <span class="skill-item">Bootstrap / Tailwind</span>
-                <span class="skill-item">UI/UX</span>
+              <div class="skill-items d-flex flex-wrap gap-2">
+                <span class="skill-item badge bg-light text-dark"
+                  >React / Next.js</span
+                >
+                <span class="skill-item badge bg-light text-dark"
+                  >HTML / CSS / JS</span
+                >
+                <span class="skill-item badge bg-light text-dark"
+                  >Bootstrap</span
+                >
               </div>
             </div>
           </div>
-          <!-- Tools & Infrastructure -->
-          <div class="col-lg-4 col-md-6 mb-4">
+          <!-- Design & Creative -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="skill-category">
+              <h4 class="mb-4">
+                <i class="fas fa-palette text-primary me-2"></i>
+                <span data-i18n="skill_design">Design</span>
+              </h4>
+              <div class="skill-items d-flex flex-wrap gap-2">
+                <span class="skill-item badge bg-light text-dark">Figma</span>
+                <span class="skill-item badge bg-light text-dark">Canva</span>
+              </div>
+            </div>
+          </div>
+          <!-- Infrastructure & Tools -->
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="skill-category">
               <h4 class="mb-4">
                 <i class="fas fa-tools text-primary me-2"></i>
-                <span data-i18n="skill_tools">Tools</span>
+                <span data-i18n="skill_tools">Infrastructure & Tools</span>
               </h4>
-              <div class="skill-items">
-                <span class="skill-item">Docker</span>
-                <span class="skill-item">Git / GitHub</span>
-                <span class="skill-item">Jira</span>
-                <span class="skill-item">SQL Server / PostgreSQL</span>
-                <span class="skill-item">Linux</span>
+              <div class="skill-items d-flex flex-wrap gap-2">
+                <span class="skill-item badge bg-light text-dark"
+                  >Git / GitHub</span
+                >
+                <span class="skill-item badge bg-light text-dark">Jira</span>
+                <span class="skill-item badge bg-light text-dark">Docker</span>
+                <span class="skill-item badge bg-light text-dark"
+                  >Linux (Ubuntu)</span
+                >
               </div>
             </div>
           </div>
@@ -454,7 +487,8 @@
       <div class="container-xl">
         <div class="footer-content">
           <h4 class="footer-brand">
-            <span class="brand-accent">Ngo</span> Gia Bao
+            <span class="brand-accent" data-i18n="first-name">Ngo</span>
+            <span data-i18n="last-name">Gia Bao</span>
           </h4>
           <p class="footer-description">Full-Stack Developer & Photographer</p>
           <div class="footer-social">

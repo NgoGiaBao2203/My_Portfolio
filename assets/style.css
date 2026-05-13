@@ -235,6 +235,7 @@ a:hover {
 
 .hero-content .lead {
   font-size: 1.2rem;
+  text-align: left;
 }
 
 .hero-content .badge {

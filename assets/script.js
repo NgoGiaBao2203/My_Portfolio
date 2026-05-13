@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentLang = "en";
   localStorage.setItem("portfolio_lang", "en");
 
-  // Lưu nội dung gốc của tất cả phần tử để dịch qua lại không bị mất icon/span
+  // Save the original content of all elements so that the icon/span is not lost when re-translating.
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     if (!element.dataset.originalHtml) {
       element.dataset.originalHtml = element.innerHTML;
     }
   });
 
-  // Cập nhật trạng thái nút EN / VI
+  // Update the language toggle button state
   function updateLanguageToggle() {
     if (!langSwitchBtn) return;
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Áp dụng bản dịch
+  // Apply translations
   async function applyTranslations(lang) {
     try {
       const response = await fetch(`locales/${lang}.json`);
@@ -38,18 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = element.getAttribute("data-i18n");
         const translatedText = translations[key];
 
-        // Nếu không có key thì bỏ qua
+        // If there's no key, skip translation for this element
         if (!translatedText) return;
 
-        // Khôi phục HTML gốc trước khi thay đổi
+        // Restore the original HTML before changing
         const originalHtml = element.dataset.originalHtml || element.innerHTML;
 
-        // Nếu có icon <i> hoặc các thẻ HTML khác
+        // If there's an icon <i> or other HTML tags
         if (originalHtml.includes("<")) {
           const temp = document.createElement("div");
           temp.innerHTML = originalHtml;
 
-          // Tìm node text đầu tiên và thay bằng bản dịch
+          // Find the first text node and replace it with the translated text
           let textUpdated = false;
 
           temp.childNodes.forEach((node) => {
@@ -63,28 +63,28 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
 
-          // Nếu không có text node thì thêm text mới vào đầu
+          // If there's no text node, insert new text at the beginning
           if (!textUpdated) {
             temp.insertAdjacentText("afterbegin", translatedText + " ");
           }
 
           element.innerHTML = temp.innerHTML;
         } else {
-          // Chỉ có text thuần
+          // Only plain text, no HTML tags
           element.textContent = translatedText;
         }
       });
 
-      // Cập nhật thuộc tính lang
+      // Update the lang attribute of the document
       document.documentElement.lang = lang;
 
-      // Lưu localStorage
+      // Save to localStorage
       localStorage.setItem("portfolio_lang", lang);
 
-      // Cập nhật biến hiện tại
+      // Update the current language variable
       currentLang = lang;
 
-      // Cập nhật nút toggle
+      // Update the language toggle button state
       updateLanguageToggle();
     } catch (error) {
       console.error("Translation error:", error);
@@ -96,15 +96,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // ====================================
   if (langSwitchBtn) {
     langSwitchBtn.addEventListener("click", () => {
-      // Xác định ngôn ngữ tiếp theo: Nếu đang là "en" thì đổi thành "vi" và ngược lại
+      //Determine the next language: If the current language is "en", change it to "vi"; otherwise, change it to "en"
       const nextLang = currentLang === "en" ? "vi" : "en";
 
-      // Thực hiện đổi ngôn ngữ
+      // Change the language
       applyTranslations(nextLang);
     });
   }
 
-  // Khởi tạo ngôn ngữ khi tải trang
+  // Initialize the language when the page loads.
   applyTranslations(currentLang);
 
   // ====================================
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navbar.classList.remove("scrolled");
       }
 
-      // Navbar luôn cố định
+      // Navbar always fixed
       navbar.style.transform = "translateY(0)";
     }
   });
