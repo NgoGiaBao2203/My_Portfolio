@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngo Gia Bao | Full-Stack Developer & Photographer</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+      <div class="container-xl">
+        <a class="navbar-brand" href="#home">
+          <span class="brand-accent">Ngo</span> Gia Bao
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" data-i18n="nav_home">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio" data-i18n="nav_portfolio">
+                Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills" data-i18n="nav_skills">
+                Skills
+              </a>
+            </li>
+            <!-- Language Switch -->
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <button id="lang-switch" class="lang-toggle" type="button">
+                <span class="lang-option" data-lang="en">EN</span>
+                <span class="lang-option" data-lang="vi">VI</span>
+                <span class="lang-slider"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section py-5">
+      <div class="container-xl py-5">
+        <div class="row align-items-center g-5">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <p class="text-muted mb-2" data-i18n="greeting">
+                Welcome to my portfolio
+              </p>
+              <h1 class="display-4 fw-900 mb-4">
+                Ngo Gia <span class="text-primary">Bao</span>
+              </h1>
+              <p class="lead text-muted mb-4" data-i18n="role_desc">
+                A Full-Stack Developer specializing in building optimized,
+                user-centric web applications. Stepping away from the screen, I
+                am a passionate photographer, applying my attention to detail
+                and aesthetic eye to capture meaningful moments.
+              </p>
+              <!-- Tech Stack Preview -->
+              <div class="mb-5">
+                <p class="small text-uppercase text-muted mb-3">
+                  <span data-i18n="tech_stack">Tech Stack</span>
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-light text-dark">React / Next.js</span>
+                  <span class="badge bg-light text-dark">.NET / C#</span>
+                  <span class="badge bg-light text-dark">Spring Boot</span>
+                  <span class="badge bg-light text-dark">PostgreSQL</span>
+                  <span class="badge bg-light text-dark">Docker</span>
+                </div>
+              </div>
+              <!-- CTA Buttons -->
+              <div class="d-flex gap-3 flex-wrap">
+                <a
+                  href="mailto:giabaongo75@gmail.com"
+                  class="btn btn-primary btn-lg"
+                >
+                  <i class="fas fa-envelope me-2"></i>Email
+                </a>
+                <a
+                  href="https://github.com/NgoGiaBao2203"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-lg"
+                  data-i18n="btn_github"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper position-relative">
+              <div class="avatar-circle"></div>
+              <img
+                src="assets/img/common/avt.png"
+                alt="Ngo Gia Bao"
+                class="hero-avatar img-fluid rounded-circle shadow-lg"
+              />
+              <div class="floating-badge">
+                <i class="fas fa-code me-2"></i>
+                <span data-i18n="badge_fullstack">Fullstack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio-section py-5 bg-light">
+      <div class="container-xl">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="text-muted text-uppercase small mb-2">
+              <span data-i18n="section_works">My Works</span>
+            </p>
+            <h2 class="display-5 fw-900 mb-4" data-i18n="portfolio_title">
+              Featured Projects
+            </h2>
+          </div>
+        </div>
+        <!-- Tabs Navigation -->
+        <ul
+          class="nav nav-pills justify-content-center gap-2 mb-5"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active px-4 py-2"
+              id="it-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#it-content"
+              type="button"
+              role="tab"
+              data-i18n="tab_it"
+            >
+              IT Portfolio
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link px-4 py-2"
+              id="photo-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#photo-content"
+              type="button"
+              role="tab"
+              data-i18n="tab_media"
+            >
+              Photography
+            </button>
+          </li>
+        </ul>
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- IT Portfolio Tab -->
+          <div
+            class="tab-pane fade show active"
+            id="it-content"
+            role="tabpanel"
+          >
+            <div class="row g-4">
+              <!-- Project Card 1 -->
+              <div class="col-lg-6">
+                <div class="project-card h-100">
+                  <div class="project-header">
+                    <h3 data-i18n="proj_warehouse_title">
+                      Warehouse & Shipping System
+                    </h3>
+                    <div class="project-meta">
+                      <span data-i18n="proj_role_group">Member 3</span>
+                    </div>
+                  </div>
+                  <p class="text-muted" data-i18n="proj_warehouse_desc">
+                    Comprehensive B2C warehouse and shipping management system.
+                    Real-time inventory tracking, order lifecycle management,
+                    supplier integration, and automated batch processing with
+                    RBAC permissions.
+                  </p>
+                  <div class="tech-stack">
+                    <span class="tech-badge">Next.js</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                  </div>
+                  <div class="project-footer">
+                    <a href="#" class="project-link">
+                      <i class="fab fa-github me-2"></i>View Source
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 2 -->
+              <div class="col-lg-6">
+                <div class="project-card h-100">
+                  <div class="project-header">
+                    <h3 data-i18n="proj_todo_title">Todo List System</h3>
+                    <div class="project-meta">
+                      <span data-i18n="proj_role_solo">Solo Project</span>
+                    </div>
+                  </div>
+                  <p class="text-muted" data-i18n="proj_todo_desc">
+                    Personal task management platform with user authentication,
+                    CRUD operations, category management, and admin dashboard.
+                    Built with 3-layer architecture for scalability.
+                  </p>
+                  <div class="tech-stack">
+                    <span class="tech-badge">.NET Core</span>
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">SQL Server</span>
+                    <span class="tech-badge">MVC</span>
+                  </div>
+                  <div class="project-footer">
+                    <a
+                      href="https://github.com/NgoGiaBao2203/WinForms_Todo-List.git"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fab fa-github me-2"></i>View Source
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 3 -->
+              <div class="col-lg-6">
+                <div class="project-card h-100">
+                  <div class="project-header">
+                    <h3 data-i18n="proj_coffee_title">
+                      Coffee Shop Management
+                    </h3>
+                    <div class="project-meta">
+                      <span data-i18n="proj_role_solo">Solo Project</span>
+                    </div>
+                  </div>
+                  <p class="text-muted" data-i18n="proj_coffee_desc">
+                    Web-based coffee shop management system. Menu management,
+                    order tracking, role-based permissions, and revenue
+                    reporting. Full CRUD functionality with clean UI.
+                  </p>
+                  <div class="tech-stack">
+                    <span class="tech-badge">ASP.NET Core MVC</span>
+                    <span class="tech-badge">HTML/CSS/JS</span>
+                    <span class="tech-badge">SQL Server</span>
+                  </div>
+                  <div class="project-footer">
+                    <a
+                      href="https://github.com/NgoGiaBao2203/coffee_shop_management_system.git"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fab fa-github me-2"></i>View Source
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Photography Tab -->
+          <div class="tab-pane fade" id="photo-content" role="tabpanel">
+            <p class="text-center text-muted mb-5" data-i18n="photo_desc">
+              Specializing in couple, event, and media production photography
+            </p>
+            <div class="row g-4">
+              <!-- Project Card 1 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Couple-1.png"
+                    alt="Couple"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Couple">Couple</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 2 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Portrait.png"
+                    alt="Portrait"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Portrait">Portrait</span>
+                  </div>
+                </div>
+                <!-- Project Card 3 -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Graducation.png"
+                    alt="Graduation"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Graduation">Events</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 4 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Graducation-1.png"
+                    alt="Graduation"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Graduation">Events</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 5 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Event.png"
+                    alt="Event"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Event">Events</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 6 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Event-1.png"
+                    alt="Event"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Event">Events</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card 7 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                  <img
+                    src="assets/img/media/Scenery.png"
+                    alt="Scenery"
+                    class="img-fluid rounded"
+                  />
+                  <div class="gallery-overlay">
+                    <span data-i18n="Scenery">Events</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section py-5">
+      <div class="container-xl">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="text-muted text-uppercase small mb-2">
+              <span data-i18n="section_expertise">Expertise</span>
+            </p>
+            <h2 class="display-5 fw-900" data-i18n="skills_title">
+              Technologies & Tools
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Backend -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category">
+              <h4 class="mb-4">
+                <i class="fas fa-server text-primary me-2"></i>
+                <span data-i18n="skill_backend">Backend</span>
+              </h4>
+              <div class="skill-items">
+                <span class="skill-item">.NET / C#</span>
+                <span class="skill-item">Spring Boot</span>
+              </div>
+            </div>
+          </div>
+          <!-- Frontend -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category">
+              <h4 class="mb-4">
+                <i class="fas fa-palette text-primary me-2"></i>
+                <span data-i18n="skill_frontend">Frontend</span>
+              </h4>
+              <div class="skill-items">
+                <span class="skill-item">React / Next.js</span>
+                <span class="skill-item">HTML / CSS / JavaScript</span>
+                <span class="skill-item">Bootstrap / Tailwind</span>
+                <span class="skill-item">UI/UX</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tools & Infrastructure -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category">
+              <h4 class="mb-4">
+                <i class="fas fa-tools text-primary me-2"></i>
+                <span data-i18n="skill_tools">Tools</span>
+              </h4>
+              <div class="skill-items">
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">Git / GitHub</span>
+                <span class="skill-item">Jira</span>
+                <span class="skill-item">SQL Server / PostgreSQL</span>
+                <span class="skill-item">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container-xl">
+        <div class="footer-content">
+          <h4 class="footer-brand">
+            <span class="brand-accent">Ngo</span> Gia Bao
+          </h4>
+          <p class="footer-description">Full-Stack Developer & Photographer</p>
+          <div class="footer-social">
+            <a
+              href="https://github.com/NgoGiaBao2203"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:giabaongo75@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/script.js"></script>
+  </body>
+</html>
