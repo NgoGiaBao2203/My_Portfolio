@@ -1,7 +1,9 @@
 {
   "nav_home": "Trang chủ",
-  "nav_portfolio": "Dự án",
+  "project": "Dự án",
   "nav_skills": "Kỹ năng",
+  "first-name": "Ngô",
+  "last-name": "Gia Bảo",
   "greeting": "Chào mừng đến với portfolio của tôi",
   "role_desc": "Tôi là một lập trình viên Full-Stack chuyên về xây dựng các ứng dụng web tối ưu hóa, lấy người dùng làm trung tâm. Ngoài công việc lập trình, tôi còn là một nhiếp ảnh gia đam mê, sử dụng sự tỉ mỉ và con mắt thẩm mỹ của mình để ghi lại những khoảnh khắc ý nghĩa.",
   "tech_stack": "Công Nghệ Sử Dụng",
@@ -19,7 +21,7 @@
   "proj_todo_desc": "Nền tảng quản lý công việc cá nhân với xác thực người dùng, các thao tác CRUD, quản lý danh mục và bảng điều khiển quản trị. Được xây dựng với kiến trúc 3 lớp để dễ dàng mở rộng.",
   "proj_coffee_title": "Quản lý Quán Cà Phê",
   "proj_coffee_desc": "Hệ thống quản lý quán cà phê trên nền tảng web. Quản lý thực đơn, theo dõi đơn hàng, phân quyền theo vai trò và báo cáo doanh thu. Đầy đủ chức năng CRUD với giao diện trực quan.",
-  "photo_desc": "Chuyên chụp ảnh cặp đôi, sự kiện và sản xuất hình ảnh truyền thông",
+  "photo_desc": "Ghi lại những khoảnh khắc chân thực nhất của bạn — từ những tấm hình kỷ yếu, chân dung đến những sự kiện đáng nhớ.",
   "Couple": "Cặp đôi",
   "Portrait": "Chân dung",
   "Graduation": "Kỷ yếu",
@@ -29,5 +31,5 @@
   "skills_title": "Công nghệ & Công cụ",
   "skill_backend": "Lập trình Backend",
   "skill_frontend": "Lập trình Frontend",
-  "skill_tools": "Công cụ & Cở sở hạ tầng"
+  "skill_tools": "Cở sở hạ tầng & Công cụ"
 }

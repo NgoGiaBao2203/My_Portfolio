@@ -1,7 +1,9 @@
 {
   "nav_home": "Home",
-  "nav_portfolio": "Portfolio",
+  "project": "Projects",
   "nav_skills": "Skills",
+  "first-name": "Ngo",
+  "last-name": "Gia Bao",
   "greeting": "Welcome to my portfolio",
   "role_desc": "A Full-Stack Developer specializing in building optimized, user-centric web applications. Stepping away from the screen, I am a passionate photographer, applying my attention to detail and aesthetic eye to capture meaningful moments.",
   "tech_stack": "Tech stack",
@@ -9,7 +11,7 @@
   "badge_fullstack": "Fullstack",
   "section_works": "My Works",
   "portfolio_title": "Featured Projects",
-  "tab_it": "IT portfolio",
+  "tab_it": "IT projects",
   "tab_media": "Photography",
   "proj_warehouse_title": "Warehouse & Shipping System",
   "proj_role_group": "Member 3",
@@ -19,7 +21,7 @@
   "proj_todo_desc": "Personal task management platform with user authentication, CRUD operations, category management, and admin dashboard. Built with 3-layer architecture for scalability.",
   "proj_coffee_title": "Coffee Shop Management",
   "proj_coffee_desc": "Web-based coffee shop management system. Menu management, order tracking, role-based permissions, and revenue reporting. Full CRUD functionality with clean UI.",
-  "photo_desc": "Specializing in couple, event, and media production photography",
+  "photo_desc": "Capturing the most authentic moments — from graduation photos and portraits to memorable events.",
   "Couple": "Couple",
   "Portrait": "Portrait",
   "Graduation": "Graduation",
@@ -29,5 +31,5 @@
   "skills_title": "Technologies & Tools",
   "skill_backend": "Backend",
   "skill_frontend": "Frontend",
-  "skill_tools": "Tools"
+  "skill_tools": "Infrastructure & Tools"
 }
