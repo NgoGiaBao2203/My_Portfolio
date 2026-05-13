@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. LANGUAGE SWITCHING (i18n)
   // ====================================
   const langSwitchBtn = document.getElementById("lang-switch");
-  let currentLang = localStorage.getItem("portfolio_lang") || "en";
+  let currentLang = "en";
+  localStorage.setItem("portfolio_lang", "en");
 
   // Lưu nội dung gốc của tất cả phần tử để dịch qua lại không bị mất icon/span
   document.querySelectorAll("[data-i18n]").forEach((element) => {
